@@ -1,0 +1,10 @@
+{
+    "nx": 48,
+    "ny": 48,
+    "nz": 48,
+    "thickness": 0.02,
+    "E": 2000000.0,
+    "nu": 0.3,
+    "objective": "stiffness",
+    "seed": 42
+}
