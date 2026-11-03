@@ -8,12 +8,10 @@ surface mesh nor a volumetric mesh of the shell is needed. The whole pipeline ru
 
 This repository contains the reference implementation of the paper
 
-> Ruihong Cen and Bohan Wang. **GPU-Accelerated Reissner–Mindlin Homogenization for Shellular
+> Ruihong Cen and Bohan Wang. GPU-Accelerated Reissner–Mindlin Homogenization for Shellular
 
 The current release contains the **forward homogenization** and the **gradient-based inverse
-design** in the space of six combined TPMS basis functions (sensitivity pass + Adam). The
-electric-potential and neural-implicit design spaces and the CMA-ES experiments of the paper are
-not part of this release.
+design** in the space of six combined TPMS basis functions (sensitivity pass + Adam). 
 
 ---
 
@@ -234,7 +232,7 @@ Weingarten map are obtained by finite differences on this texture.
 | volumetric stabilization ρ | (h + 1/h)·10⁴, h = 1/nx | `simulator.cuh` |
 | normal penalty of **w**, ρ<sub>w</sub> | E·t | `rm_shell.cuh` |
 | grid relaxation | 40 sweeps, h = 0.2, α = 0.1, k = 1.5, dt = 0.05 | `grid.cuh` |
-| constitutive law | σ = 2με + λ tr(ε) I with μ = E/(2(1+ν)), λ = Eν/(1−ν²) (plane stress) | `simulator.cuh` |
+| constitutive law | σ = 2με + λ tr(ε) I with μ = E/(2(1+ν)), λ = Eν/(1−ν²) | `simulator.cuh` |
 
 ## Repository layout
 
