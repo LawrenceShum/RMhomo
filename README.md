@@ -9,8 +9,6 @@ surface mesh nor a volumetric mesh of the shell is needed. The whole pipeline ru
 This repository contains the reference implementation of the paper
 
 > Ruihong Cen and Bohan Wang. **GPU-Accelerated Reissner–Mindlin Homogenization for Shellular
-> Unit Cells from Implicit Geometry.** *ACM Transactions on Graphics* 45(6), Article 232, 2026.
-> [doi:10.1145/3842517](https://doi.org/10.1145/3842517)
 
 The current release contains the **forward homogenization** and the **gradient-based inverse
 design** in the space of six combined TPMS basis functions (sensitivity pass + Adam). The
@@ -272,21 +270,6 @@ src/main.cu                   forward homogenization driver (shellhomo)
 src/inverse_design.cu         inverse-design driver (shellhomo_inverse)
 scripts/generate_tpms_sdf.py  example input generator
 third_party/rapidjson/        RapidJSON 1.1.0 (MIT)
-```
-
-## Citation
-
-```bibtex
-@article{cen2026shellhomo,
-  author  = {Cen, Ruihong and Wang, Bohan},
-  title   = {GPU-Accelerated Reissner--Mindlin Homogenization for Shellular Unit Cells from Implicit Geometry},
-  journal = {ACM Transactions on Graphics},
-  volume  = {45},
-  number  = {6},
-  articleno = {232},
-  year    = {2026},
-  doi     = {10.1145/3842517}
-}
 ```
 
 ## License
