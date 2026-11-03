@@ -236,18 +236,6 @@ Weingarten map are obtained by finite differences on this texture.
 | grid relaxation | 40 sweeps, h = 0.2, α = 0.1, k = 1.5, dt = 0.05 | `grid.cuh` |
 | constitutive law | σ = 2με + λ tr(ε) I with μ = E/(2(1+ν)), λ = Eν/(1−ν²) (plane stress) | `simulator.cuh` |
 
-### Reproducibility
-
-Global assembly and the CG dot products accumulate with floating-point atomics, so two runs on
-the same input can differ in the last bits; in our tests C<sup>H</sup> varies by about 10⁻⁶
-(relative) between runs. The CG tests convergence only every few iterations, so when the residual
-is close to the tolerance at a test, the run may stop one test later and C<sup>H</sup> can differ by
-about 10⁻⁴.
-
-In the inverse-design loop these differences are amplified over the iterations: runs with the
-same seed start identically and drift apart after a few dozen iterations. In our tests the final
-objective of two runs differed by up to 0.5 %.
-
 ## Repository layout
 
 ```
